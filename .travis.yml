@@ -8,8 +8,7 @@ install:
     - pip install jupyter
     - wget https://github.com/hakimel/reveal.js/archive/master.zip
     - unzip master.zip
-    - mv reveal.js-master/js/reveal.js .
-    - rm -rf reveal.js-master
+    - mv reveal.js-master reveal.js
 
 script:
     - jupyter nbconvert enterprise_tutorial.ipynb --to slides --reveal-prefix=reveal.js --SlidesExporter.reveal_theme=solarized
