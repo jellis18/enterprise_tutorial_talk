@@ -16,7 +16,7 @@ script:
 after_success: |
     if [ -n "$GITHUB_API_KEY" ]; then
     git checkout --orphan gh-pages
-    git rm -rf --cached *
+    git rm -rf --cached .
     mv enterprise_tutorial.slides.html index.html
     git add -f index.html img reveal.js
     git -c user.name='travis' -c user.email='travis' commit -m init
